@@ -4,11 +4,11 @@ import { DispatchRenderer, initJsonFormsStore } from '@jsonforms/core'
 import '@jsonforms/material-renderers';
 import { day3 } from '@jsonforms/examples';
 
-const store = initJsonFormsStore(
-  day3.data,
-  day3.schema,
-  day3.uischema
-);
+const store = initJsonFormsStore({
+  data: day3.data,
+  schema: day3.schema,
+  uischema: day3.uischema
+});
 
 const Day3 = () => (
   <Provider store={store}>

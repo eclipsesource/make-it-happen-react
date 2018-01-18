@@ -4,11 +4,11 @@ import { DispatchRenderer, initJsonFormsStore, registerRenderer } from '@jsonfor
 import '@jsonforms/material-renderers';
 import { day6, RatingControl, ratingControlTester } from '@jsonforms/examples';
 
-const store = initJsonFormsStore(
-  day6.data,
-  day6.schema,
-  day6.uischema
-);
+const store = initJsonFormsStore({
+  data: day6.data,
+  schema: day6.schema,
+  uischema: day6.uischema
+});
 
 store.dispatch(registerRenderer(ratingControlTester, RatingControl));
 
