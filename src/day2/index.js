@@ -1,20 +1,25 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { DispatchRenderer, initJsonFormsStore } from '@jsonforms/core'
-import '@jsonforms/material-renderers';
+import { combineReducers, createStore } from 'redux';
+import { Actions, JsonForms, jsonformsReducer } from '@jsonforms/core'
+import { materialRenderers, materialFields } from '@jsonforms/material-renderers';
 import { day2 } from '@jsonforms/examples';
 
-const store = initJsonFormsStore(
-  day2.data,
-  day2.schema,
-  day2.uischema
+const store = createStore(
+  combineReducers({ jsonforms: jsonformsReducer() }),
+  {
+    jsonforms: {
+      renderers: materialRenderers,
+      fields: materialFields
+    }
+  }
 );
+
+store.dispatch(Actions.init(day2.data, day2.schema, day2.uischema));
 
 const Day2 = () => (
   <Provider store={store}>
-    <DispatchRenderer
-      schema={day2.schema}
-    />
+    <JsonForms />
   </Provider>
 );
 
