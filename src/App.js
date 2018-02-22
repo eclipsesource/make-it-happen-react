@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Route,
   Link,
+  Switch
 } from 'react-router-dom';
 import {
   AppBar,
@@ -106,13 +107,16 @@ class App extends Component {
               </Toolbar>
             </AppBar>
             <Paper className={classes.paper}>
-              <Route path='/day1' component={Day1} />
-              <Route path='/day2' component={Day2} />
-              <Route path='/day3' component={Day3} />
-              <Route path='/day4' component={Day4} />
-              <Route path='/day5' component={Day5} />
-              <Route path='/day5-categories' component={Day5WithCategories} />
-              <Route path='/day6' component={Day6} />
+              <Switch>
+                <Route path='/' component={Day1} />
+                <Route path='/day1' component={Day1} />
+                <Route path='/day2' component={Day2} />
+                <Route path='/day3' component={Day3} />
+                <Route path='/day4' component={Day4} />
+                <Route path='/day5' component={Day5} />
+                <Route path='/day5-categories' component={Day5WithCategories} />
+                <Route path='/day6' component={Day6} />
+              </Switch>
             </Paper>
           </div>
         </Router>
