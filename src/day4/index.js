@@ -1,7 +1,8 @@
 import React from 'react';
 import { Provider } from 'react-redux';
 import { combineReducers, createStore } from 'redux';
-import { Actions, JsonForms, jsonformsReducer } from '@jsonforms/core'
+import { Actions, jsonformsReducer } from '@jsonforms/core'
+import { JsonForms } from '@jsonforms/react';
 import { materialRenderers, materialFields } from '@jsonforms/material-renderers';
 import { day4 } from '@jsonforms/examples';
 

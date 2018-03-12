@@ -108,7 +108,6 @@ class App extends Component {
             </AppBar>
             <Paper className={classes.paper}>
               <Switch>
-                <Route path='/' component={Day1} />
                 <Route path='/day1' component={Day1} />
                 <Route path='/day2' component={Day2} />
                 <Route path='/day3' component={Day3} />
@@ -116,6 +115,7 @@ class App extends Component {
                 <Route path='/day5' component={Day5} />
                 <Route path='/day5-categories' component={Day5WithCategories} />
                 <Route path='/day6' component={Day6} />
+                <Route path='/' component={Day1} />
               </Switch>
             </Paper>
           </div>
