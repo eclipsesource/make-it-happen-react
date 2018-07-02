@@ -5,15 +5,13 @@ import {
   Link,
   Switch
 } from 'react-router-dom';
-import {
-  AppBar,
-  Button,
-  Paper,
-  Toolbar,
-  Typography,
-  withStyles
-} from "material-ui";
-import { blue } from 'material-ui/colors'
+import AppBar from '@material-ui/core/AppBar';
+import Button from '@material-ui/core/Button';
+import Paper from '@material-ui/core/Paper';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import withStyles from '@material-ui/core/styles/withStyles';
+import blue from '@material-ui/core/colors/blue'
 import Radium from 'radium';
 import './App.css';
 import Day1 from './day1';
