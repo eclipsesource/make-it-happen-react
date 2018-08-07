@@ -94,7 +94,7 @@ class App extends Component {
                   days.map(day =>
                       <Button
                         component={RadiumLink}
-                        color='contrast'
+                        color='default'
                         to={`/${day.value}`}
                         key={`btn-${day.value}`}
                       >
