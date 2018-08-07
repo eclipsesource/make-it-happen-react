@@ -8,7 +8,9 @@ import {
   materialFields,
   materialCategorizationTester,
   MaterialCategorizationLayout
-} from '@jsonforms/material-renderers';import { day6, RatingControl, ratingControlTester } from '@jsonforms/examples';
+} from '@jsonforms/material-renderers';import { day6 } from '@jsonforms/examples';
+import ratingControlTester from "./ratingControlTester";
+import RatingControl from "./RatingControl";
 
 const store = createStore(
   combineReducers({ jsonforms: jsonformsReducer() }),
