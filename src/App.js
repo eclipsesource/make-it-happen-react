@@ -34,7 +34,6 @@ const styles = theme => ({
     flex: 1,
   },
   paper: {
-    flex: 1,
     width: '80%',
     justifyContent: 'center',
     margin: 'auto',
@@ -46,7 +45,19 @@ const styles = theme => ({
   },
   title: {
     flex: 1,
+    fontSize: 20,
   },
+  button : {
+    color: '#fff',
+  },
+  container: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'column',
+    height: 'calc( 100vh - 64px)',
+    background: '#d4d9dd'
+  }
 });
 
 class App extends Component {
@@ -95,6 +106,7 @@ class App extends Component {
                       <Button
                         component={RadiumLink}
                         color='default'
+                        className={classes.button}
                         to={`/${day.value}`}
                         key={`btn-${day.value}`}
                       >
@@ -104,18 +116,20 @@ class App extends Component {
                 }
               </Toolbar>
             </AppBar>
-            <Paper className={classes.paper}>
-              <Switch>
-                <Route path='/day1' component={Day1} />
-                <Route path='/day2' component={Day2} />
-                <Route path='/day3' component={Day3} />
-                <Route path='/day4' component={Day4} />
-                <Route path='/day5' component={Day5} />
-                <Route path='/day5-categories' component={Day5WithCategories} />
-                <Route path='/day6' component={Day6} />
-                <Route path='/' component={Day1} />
-              </Switch>
-            </Paper>
+            <div className={classes.container}>
+              <Paper className={classes.paper}>
+                <Switch>
+                  <Route path='/day1' component={Day1} />
+                  <Route path='/day2' component={Day2} />
+                  <Route path='/day3' component={Day3} />
+                  <Route path='/day4' component={Day4} />
+                  <Route path='/day5' component={Day5} />
+                  <Route path='/day5-categories' component={Day5WithCategories} />
+                  <Route path='/day6' component={Day6} />
+                  <Route path='/' component={Day1} />
+                </Switch>
+              </Paper>
+            </div>
           </div>
         </Router>
       </div>
